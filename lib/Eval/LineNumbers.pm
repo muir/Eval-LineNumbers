@@ -47,8 +47,8 @@ Use C<\\n> instead when you can.
 
 =head1 LICENSE
 
-Copyright (C) 2009 David Muir Sharnoff
-Copyright (C) 2013 Google, Inc
+Copyright (C) 2009 David Muir Sharnoff.
+Copyright (C) 2013 Google, Inc.
 
 This package may be used and redistributed under the terms of either
 the Artistic 2.0 or LGPL 2.1 license.
