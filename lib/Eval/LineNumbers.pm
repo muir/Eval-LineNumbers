@@ -11,10 +11,10 @@ our $VERSION = 0.32;
 
 sub eval_line_numbers
 {
-	my $level = 0;
-	$level = shift
-		if $_[0] =~ /^[0-9]+$/;
-	my(undef, $file, $line) = caller($level);
+	my(undef, $file, $line) = caller(
+		# Optional first arg is the caller level
+		$_[0] =~ /^[0-9]+$/ ? (shift) : 0
+	);
 	$line++;
 	my $val = qq{#line $line "$file"\n}.join('',@_);
 	return $val;
