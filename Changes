@@ -3,7 +3,7 @@ Revision history for Perl module Eval::LineNumbers
 
 0.32 2013/10/01
 
- - use 'herdoc' instead of 'hereis'
+ - use 'heredoc' instead of 'hereis'
  - add Google copyright
  - rename CHANGELOG to Changes
  - add README
