@@ -3,22 +3,21 @@ package Eval::LineNumbers;
 
 use warnings;
 use strict;
-require Exporter;
-our @ISA = qw(Exporter);
-our @EXPORT = qw();
+
+use Exporter 5.57 'import';
 our @EXPORT_OK = qw(eval_line_numbers);
 
-our $VERSION = 0.32;
+our $VERSION = '0.32';
+$VERSION = eval $VERSION;
 
 sub eval_line_numbers
 {
-	my $level = 0;
-	$level = shift
-		if $_[0] =~ /^\d\d?$/;
-	my($pkg, $file, $line) = caller($level);
+	my(undef, $file, $line) = caller(
+		# Optional first arg is the caller level
+		$_[0] =~ /^[0-9]+$/ ? (shift) : 0
+	);
 	$line++;
-	my $val = qq{#line $line "$file"\n}.join('',@_);
-	return $val;
+	return join('', qq{#line $line "$file"\n}, @_)
 }
 1;
 

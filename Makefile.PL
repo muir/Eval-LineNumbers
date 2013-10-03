@@ -1,11 +1,14 @@
 
 use ExtUtils::MakeMaker;
 
-WriteMakefile( 
+WriteMakefile(
 	'VERSION_FROM' => 'lib/Eval/LineNumbers.pm',
 	'NAME' => 'Eval-LineNumbers',
 	'dist' => { COMPRESS=>"gzip", SUFFIX=>"gz" },
-	($] >= 5.005 
+	'PREREQ_PM' => {
+		'Exporter' => '5.57', # in core since 5.8.3, and also on CPAN
+	},
+	($] >= 5.005
 		?	
 			(
 				ABSTRACT	=> "Add line numbers to eval'ed heredoc blocks",
@@ -15,7 +18,7 @@ WriteMakefile(
 						repository => 'http://github.com/muir/Eval-LineNumbers',
 					},
 				},
-			) 
+			)
 		: ()
 	),
 );
