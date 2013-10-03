@@ -7,7 +7,8 @@ use strict;
 use Exporter 5.57 'import';
 our @EXPORT_OK = qw(eval_line_numbers);
 
-our $VERSION = 0.32;
+our $VERSION = '0.32';
+$VERSION = eval $VERSION;
 
 sub eval_line_numbers
 {
