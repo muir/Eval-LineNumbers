@@ -3,9 +3,8 @@ package Eval::LineNumbers;
 
 use warnings;
 use strict;
-require Exporter;
-our @ISA = qw(Exporter);
-our @EXPORT = qw();
+
+use Exporter 5.57 'import';
 our @EXPORT_OK = qw(eval_line_numbers);
 
 our $VERSION = 0.32;

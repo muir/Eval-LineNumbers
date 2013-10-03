@@ -5,6 +5,9 @@ WriteMakefile(
 	'VERSION_FROM' => 'lib/Eval/LineNumbers.pm',
 	'NAME' => 'Eval-LineNumbers',
 	'dist' => { COMPRESS=>"gzip", SUFFIX=>"gz" },
+	'PREREQ_PM' => {
+		'Exporter' => '5.57', # in core since 5.8.3, and also on CPAN
+	},
 	($] >= 5.005 
 		?	
 			(
