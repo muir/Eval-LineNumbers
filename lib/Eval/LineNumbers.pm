@@ -16,8 +16,7 @@ sub eval_line_numbers
 		$_[0] =~ /^[0-9]+$/ ? (shift) : 0
 	);
 	$line++;
-	my $val = qq{#line $line "$file"\n}.join('',@_);
-	return $val;
+	return join('', qq{#line $line "$file"\n}, @_)
 }
 1;
 
