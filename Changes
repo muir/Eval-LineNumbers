@@ -1,6 +1,13 @@
 
 Revision history for Perl module Eval::LineNumbers
 
+0.33 2013/10/04
+
+ - Complete makeover by Olivier Mengu√:
+   - add caller-level support
+   - add a test
+   - fix typos, groom makefile and code
+
 0.32 2013/10/01
 
  - use 'heredoc' instead of 'hereis'
