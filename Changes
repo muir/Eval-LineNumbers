@@ -1,6 +1,10 @@
 
 Revision history for Perl module Eval::LineNumbers
 
+0.34 2013/10/07
+
+ - Fix Makefile.PL NAME
+
 0.33 2013/10/04
 
  - Complete makeover by Olivier Mengu√:
