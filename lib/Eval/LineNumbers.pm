@@ -28,7 +28,7 @@ Eval::LineNumbers - Add line numbers to heredoc blocks that contain perl source 
 
 =head1 SYNOPSIS
 
- use Eval::LineNumbers qw(eval_line_numbes);
+ use Eval::LineNumbers qw(eval_line_numbers);
 
  eval eval_line_numbers(<<END_HEREIS);
    code
